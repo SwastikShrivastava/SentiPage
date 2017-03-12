@@ -1,0 +1,30 @@
+{
+    "name": "SentiPage",
+    "version": "1.0",
+    "description": "Shows page sentiments! Good to read or avoid the page!",
+    "icons": { 
+          "128": "./extension_content/icon.png" },
+    "permissions": [
+        "cookies",
+        "tabs",
+        "*://*/*"
+    ],
+
+    "browser_action": {
+        "default_title": "Show Sentiments",
+        "default_icon": "./extension_content/icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "all_frames": true,
+        "js": ["./source/jquery.min.js", "background.js"]
+    }],
+    "permissions" : ["tabs"],
+
+    "web_accessible_resources": [
+        "./extension_content/icon.png"
+    ],
+
+    "manifest_version": 2
+}
