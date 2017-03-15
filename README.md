@@ -1,4 +1,4 @@
 # SentiPage
-![alt tag](https://github.com/rajatrawataku1/SentiPage/tree/master/extension_content/icon.png?raw=true "Title")
+![Alt text](/extension_content/icon.png?raw=true "Optional Title")
 HTML Page Sentiments Analysis. Google Chrome Extension for analysis.
 
