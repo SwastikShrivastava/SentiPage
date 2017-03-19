@@ -2,27 +2,47 @@
 <html>
   <head>
     <title>Sentiments of the Page!</title>
+
+  	<link rel="stylesheet" href="font/css/font-awesome.min.css">
     <script src="./source/jquery.min.js"> </script>
     <script type="text/javascript"  src="./source/materialize.js"> </script>
-     <script type="text/javascript"  src="popup.js"> </script>
     <link rel="stylesheet" href="./source/materialize.css">
+    <script type="text/javascript"  src="popup.js"> </script>
+
+    <style type="text/css">
+    	
+    		@font-face {
+
+			 font-family:regular_varela;
+			 src: url(VarelaRound-Regular.ttf);
+
+			}
+
+			@font-face {
+
+			 font-family:Nunito-SemiBold;
+			 src: url(Nunito-SemiBold.ttf);
+
+			} 
+
+    </style>
+
   </head>
   <body>
-    <div class="body indigo lighten-5" style="height: auto;width: 300px;">
-     <nav class="transparent hoverable">
+    <div class="body indigo lighten-5" style="height: auto;width: 400px;">
+     <nav class=" light-blue darken-4 hoverable">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center" style="color: black">SentiPage</a>
+        <a href="#" class="brand-logo center" style="color: white ; font-family: Nunito-SemiBold">SentiPage</a>
       </div>
     </nav>
     <br>
     <div class="row">
       <div class="col s12 center" id="fill">
         
+        <br> <br> 
 
-
-
- <div class="preloader-wrapper big active">
-      <div class="spinner-layer spinner-blue">
+ 	 <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
           <div class="circle"></div>
         </div><div class="gap-patch">
@@ -63,27 +83,53 @@
       </div>
     </div>
 
-
-
       </div>
       <br>
        <div class="col s12 center" id="text">
         
       </div>
     </div>
-    <div class="row">
-    <div class="col s4">
-        <a href="https://www.facebook.com/swastik.shrivastava.cse" ><img class="circle responsive-img hoverable right" src="./extension_content/facebook.png" id="fb">
-      </div></a>
-      <div class="col s4 center">
-        <a href="https://github.com/SwastikShrivastava/SentiPage" ><img class="circle responsive-img hoverable" src="./extension_content/github.png">
-      </div></a>
-      <div class="col s4">
-        <a href="https://twitter.com/Swastik_cse" ><img class="circle responsive-img hoverable" src="./extension_content/twitter.png">
-      </div></a>
+
+   
+    <div class="row"> <br>   	
+     
+    	<script type="text/javascript">
+
+	       	$('.tooltipped').tooltip({
+		      delay: 50    
+		    });
+
+       </script>
+
+
+       <div class="col s3 center offset-s2"> <br> <br>
+       		<a href="#!"><i class="fa io fa-facebook-official fa-4x tooltipped "  data-position="bottom" data-delay="50" data-tooltip='vxgddfgf' aria-hidden="true" style="color:#3b5998" ></i> </a>
+       </div>
+
+     
+      <div class="col s3 center "> <br> <br>
+        <a href="https://github.com/SwastikShrivastava/SentiPage"><i class="fa fa-github fa-4x" style="color:black" aria-hidden="true"></i>
+		</a>
+      </div>
+
+      <div class="col s3 center"> <br> <br>
+        <a href="https://twitter.com/Swastik_cse" ><i class="fa fa-twitter fa-4x" aria-hidden="true" style="color:#00aced" ></i>
+         </a>
+      </div>
+
+
+      <br> <br> <br> <br>   
+
+      <div class="class col s12 center"> <br>
+      		<h6 style="font-family: regular_varela ;"> Made with Love </h6> <br>
+      </div>
+
+      <br> <br> <br> 
     </div>
+
     </div>
     
   </body>
+
 </html>
 
