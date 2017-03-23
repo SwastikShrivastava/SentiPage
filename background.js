@@ -2,6 +2,7 @@ var uselessWords = ["is","of","the","on","off","was","i","","has","have","had","
 
 
 chrome.runtime.onMessage.addListener(
+  
     function(request, sender, sendResponse) {
         console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
@@ -16,16 +17,18 @@ chrome.runtime.onMessage.addListener(
         var count=0;
         var happyCount=0,sadCount=0;
         var k=0;
+
         for (var i = 0; i < wordArray.length; i++) {
           for (var j =0; j < diff.length-1; j++) {
              if (diff[j]==wordArray[i]) {
-              value+=parseInt(scoresArray[i]);
-              count=count+1;
-              if (parseInt(scoresArray[i])>7) {
-                happyCount+=1;
-              }
-              else if (parseInt(scoresArray[i])<3.5) {
-                sadCount+=1;
+              
+                value+=parseInt(scoresArray[i]);
+                count=count+1;
+                if (parseInt(scoresArray[i])>7) {
+                  happyCount+=1;
+                }
+                else if (parseInt(scoresArray[i])<3.5) {
+                  sadCount+=1;
               }
              }
            }
@@ -33,10 +36,20 @@ chrome.runtime.onMessage.addListener(
         }
 
         if(k==wordArray.length-1){
-          var val1 = value/count;
-          console.log(value/count);
+
           console.log(happyCount+" sad "+sadCount)
-          sendResponse({val: val1});
+
+          if(happyCount==0&&sadCount==0)
+          {
+              sendResponse({val:-1});
+          }
+          else
+          {
+            sendResponse({val: value/count});
+          }
+
+         
+          
         }
         
 });
